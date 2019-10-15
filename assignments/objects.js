@@ -99,9 +99,17 @@ const parent = {
     grandchild: {
       name: "Sam", 
       age: 30,
-      speak: () => `Hello, my name is ${parent.child.grandchild.name}`},
-    speak: () => `Hello, my name is ${parent.child.name}`},
-  speak: () => `Hello, my name is ${parent.name}`
+      speak: function() {
+        return `Hello, my name is ${parent.child.grandchild.name}`
+      }
+    },
+    speak: function(){
+      return `Hello, my name is ${parent.child.name}`
+    }
+  },
+  speak: function(){ 
+    return  `Hello, my name is ${parent.name}`
+  }
 }
 
 // Log the parent object's name
